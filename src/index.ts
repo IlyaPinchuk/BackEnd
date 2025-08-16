@@ -23,6 +23,11 @@ const db = {
         }
     ]
 };
+app.get('/', (req, res) => {
+
+    res.send('Hello World!');
+})
+
 app.get('/courses', (req, res) => {
     let foundCourses = db.courses;
     if (req.query.title) {
